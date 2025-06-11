@@ -30,7 +30,7 @@ namespace Uppgift_4
 
                 if (tal == speltal)
                     Console.WriteLine("\tGrattis, du gissade rätt!");
-                spela = true; //Vi vill att loopen ska fortsätta, så länge användaren inte gissat rätt
+                spela = false; //Programmet ska stängas av när talet är rätt gissat!
 
             }
         }
