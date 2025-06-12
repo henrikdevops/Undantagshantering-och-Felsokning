@@ -1,4 +1,4 @@
-﻿
+
 namespace Uppgift_4
 {
     class Program
@@ -30,7 +30,7 @@ namespace Uppgift_4
 
                 if (tal == speltal)
                     Console.WriteLine("\tGrattis, du gissade rätt!");
-                spela = false; //Programmet ska stängas av när talet är rätt gissat!
+                spela = true; //Programmet ska stängas av när talet är rätt gissat!
 
             }
         }
