@@ -31,7 +31,7 @@ namespace Uppgift_4
                 if (tal == speltal)
                 {
                     Console.WriteLine("\tGrattis, du gissade rätt!");
-                    spela = true; //Programmet ska stängas av när talet är rätt gissat!
+                    spela = false; //Programmet ska stängas av när talet är rätt gissat!
                 }
             }
         }
