@@ -15,8 +15,6 @@ namespace Uppgift_4
             {
                 Console.Write("\tGissa på ett tal mellan 1 och 20: ");
                 Int32.TryParse(Console.ReadLine(), out int tal); // Använder TryParse för att undvika undantag vid felaktig inmatning
-                //Om vi använder oss av en TryParse så kan vi undvika att programmet kraschar om användaren matar in något som inte är ett heltal.
-                //Om vi använder oss av Convert.ToInt32() istället så kommer programmet att krascha om användaren matar in något som inte är ett heltal.
 
                 if (tal < speltal)
                 {
