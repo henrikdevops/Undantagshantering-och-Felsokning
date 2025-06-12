@@ -28,10 +28,11 @@ namespace Uppgift_4
                     Console.WriteLine("\tDet inmatade talet " + tal + " är för stort, försök igen."); // + efter tal /Rödigerar felaktig syntax
                 }
 
-                if (tal == speltal)
-                    Console.WriteLine("\tGrattis, du gissade rätt!");
-                spela = true; //Programmet ska stängas av när talet är rätt gissat!
-
+                {
+                    if (tal == speltal)
+                        Console.WriteLine("\tGrattis, du gissade rätt!");
+                    spela = true; //Programmet ska stängas av när talet är rätt gissat!
+                }
             }
         }
     }
