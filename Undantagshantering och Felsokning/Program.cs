@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace Uppgift_4
 {
     class Program
@@ -8,18 +7,16 @@ namespace Uppgift_4
         {
             // Deklaration av variabler
             Random slumpat = new Random(); // skapar ett random objekt
-
             int speltal = slumpat.Next(1, 20); // anropar Next metoden för att skapa ett slumptal mellan 1 och 20
-
             Console.WriteLine("\n\tVälkommen till gissningsspelet: Felgissat tal ger dig kanske BLUESCREEEN!"); // Skriver ut en välkomsttext
             bool spela = true; // Variabel för att kontrollera om spelet ska fortsätta köras
-            
-            while (spela) // (!spela) skulle innebära att loopen inte körs om spela är false, vilket inte är vad vi vill.
-            {
 
+            while (spela) // Tog bort ! loopen dörå den inte behövs, vi vill att loopen ska fortsätta så länge användaren inte gissat rätt
+            {
                 Console.Write("\tGissa på ett tal mellan 1 och 20: ");
                 Int32.TryParse(Console.ReadLine(), out int tal); // Använder TryParse för att undvika undantag vid felaktig inmatning
-               
+                //Om vi använder oss av en TryParse så kan vi undvika att programmet kraschar om användaren matar in något som inte är ett heltal.
+                //Om vi använder oss av Convert.ToInt32() istället så kommer programmet att krascha om användaren matar in något som inte är ett heltal.
 
                 if (tal < speltal)
                 {
@@ -31,12 +28,10 @@ namespace Uppgift_4
                     Console.WriteLine("\tDet inmatade talet " + tal + " är för stort, försök igen."); // + efter tal /Rödigerar felaktig syntax
                 }
 
-                //Denna if-sats hade tidigare inget kodblock vilket innebar att programmet fortsatte att köra även om användaren gissat rätt.
                 if (tal == speltal)
-                {
                     Console.WriteLine("\tGrattis, du gissade rätt!");
-                    spela = false; //Vi vill att loopen ska avslutas när användaren gissat rätt
-                }
+                spela = false; //Programmet ska stängas av när talet är rätt gissat!
+
             }
         }
     }
